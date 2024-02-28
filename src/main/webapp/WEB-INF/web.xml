@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <display-name>TurnManager</display-name>
+    <servlet>
+        <servlet-name>turnSv</servlet-name>
+        <servlet-class>prueba2.manager.servlet.turnSv</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>personSv</servlet-name>
+        <servlet-class>prueba2.manager.servlet.PersonSv</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>menuSv</servlet-name>
+        <servlet-class>prueba2.manager.servlet.MenuSv</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ManagerSv</servlet-name>
+        <servlet-class>prueba2.manager.servlet.ManagerSv</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>turnSv</servlet-name>
+        <url-pattern>/turnoSv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>menuSv</servlet-name>
+        <url-pattern>/menuSv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>personSv</servlet-name>
+        <url-pattern>/userSv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManagerSv</servlet-name>
+        <url-pattern>/managerSv</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
